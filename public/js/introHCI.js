@@ -35,12 +35,10 @@ function addProjectDetails(e) {
 
 function callback(result){
 	console.log(result);
-	var html = '<a href = "#" class =#thumbnail">' + 
+	var html = '<a href = "#" class ="thumbnail">' + 
 					'<img src="' + result['image'] + '" class ="detailsImage">' +
-					'<p>' + 
-							result['title'] + '<br>' + result['date'] + 
-					'</p>'+
-				'</a>' +
+					'<p>' + result['title'] + '</p>' + 
+					'<p><small>' + result['date'] + '</small></p> </a>' +
 				result['summary'];
 	var classid = '#project' + result['id'];
 	$(classid+" .details").html(html);
